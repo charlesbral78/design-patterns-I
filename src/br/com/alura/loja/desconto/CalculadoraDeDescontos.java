@@ -8,10 +8,10 @@ public class CalculadoraDeDescontos {
 
     public BigDecimal calcular(Orcamento orcamento) {
 
-        Desconto desconto = new DescontoOrcamentoMaisCincoItens(
+        Desconto cadeiaDeDescontos = new DescontoOrcamentoMaisCincoItens(
                 new DescontoOrcamentoValorMaiorQuinhentos(
                         new SemDesconto()));
 
-        return desconto.calcular(orcamento);
+        return cadeiaDeDescontos.calcular(orcamento);
     }
 }

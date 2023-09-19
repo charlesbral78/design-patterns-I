@@ -21,12 +21,12 @@ public class RegisttroOrcamento {
         if (!orcamento.isFinalizado()) {
             throw new DomainException("Orcamento nao finalizado!");
 
-            String url = "http://api.externa/orcamento";
+        /*    String url = "http://api.externa/orcamento";
             Map<String, Object> dados = Map.of(
                     "valor", orcamento.getValor(),
                     "quantidadeItens", orcamento.getQuantidadeItens()
             );
-            http.post(url, dados);
+            http.post(url, dados); */
         }
     }
 }

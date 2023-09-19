@@ -4,9 +4,14 @@ import br.com.alura.loja.orcamento.Orcamento;
 
 import java.math.BigDecimal;
 
-public class Icms implements Imposto{
+public class Icms extends Imposto{
 
-    public BigDecimal efetuarCalculo(Orcamento orcamento) {
+
+    public Icms(Imposto outro) {
+        super(outro);
+    }
+
+    public BigDecimal realizarCalculo(Orcamento orcamento) {
         return orcamento.getValor().multiply(new BigDecimal("0.1"));
     }
 }
